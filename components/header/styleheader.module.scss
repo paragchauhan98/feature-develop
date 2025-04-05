@@ -1,0 +1,232 @@
+@media (max-width: 550px) {
+  .nav {
+    display: none !important;
+  }
+  .shownav {
+    display: flex;
+  }
+  .menuName {
+    display: block !important;
+  }
+}
+.menuName {
+  display: none;
+}
+
+.workPage {
+  color: #000000 !important; // Black background for work page
+}
+.dot{
+  background-color: #000000 !important; // Black background for work page
+}
+.header {
+  position: absolute;
+  color: white;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  padding: 35px;
+  width: 100%;
+  box-sizing: border-box;
+
+  .navContainer {
+    .menuName p{
+      font-size: 18px;
+    }
+    .MenuEndicator {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: white;
+      position: absolute;
+      top: 40%;
+      left: -30%;
+    }
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    .copyright {
+      font-size: 20px;
+    }
+    p {
+      margin: 0px;
+      transition: all 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+      position: relative;
+    }
+
+    .name {
+      display: flex;
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+      // margin-left: 5px;
+      transition: all 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+      p {
+        font-size: 18px;
+        position: relative;
+        transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+      }
+      .codeby {
+        padding-left: 0.3rem;
+      }
+      .parag {
+        padding-left: 0.3rem;
+      }
+      // .snellenberg {
+      //   position: absolute;
+      //   left: 130px;
+      //   padding-left: 0.3rem;
+      // }
+    }
+    &:hover {
+      .copyright {
+        transform: rotate(360deg);
+      }
+    }
+  }
+  .nav {
+    display: flex;
+    .el {
+      display: flex;
+      position: relative;
+      padding: 15px;
+      cursor: pointer;
+      font-size: 1.4rem;
+      p {
+        font-size: 18px;
+      }
+      &:hover {
+        .endicator {
+          transform: scale(1);
+        }
+      }
+      .endicator {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: white;
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: scale(0) translateX(-50%);
+        transition: transform 0.2s cubic-bezier(0.76, 0, 0.24, 1);
+      }
+    }
+  }
+}
+
+.headerButtonContainer {
+  transform: scale(0);
+  position: fixed;
+  right: 0px;
+  z-index: 4;
+
+  .button {
+    position: relative;
+    right: 0px;
+    margin: 20px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: #1c1d20;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    overflow: hidden;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgb(69, 92, 233);
+      bottom: 0;
+      left: 0;
+      transform: translateY(100%);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    &:hover::after {
+      transform: translateY(0);
+    }
+  }
+
+  .burger {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::after,
+    &::before {
+      content: "";
+      display: block;
+      width: 30%;
+      height: 1px;
+      background-color: white;
+      position: absolute;
+      transition: all 0.3s;
+    }
+
+    &::after {
+      transform: translateY(-5px);
+    }
+    &::before {
+      transform: translateY(5px);
+    }
+  }
+
+  .burgerActive {
+    background-color: rgb(69, 92, 233) !important;
+
+    &::after,
+    &::before {
+      background-color: white;
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+    &::before {
+      transform: rotate(45deg);
+    }
+  }
+
+  .nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .nav a.active {
+    color: red; /* 🔥 Highlight active page */
+  }
+  
+  .activeDot {
+    width: 6px;
+    height: 6px;
+    background-color: red;
+    border-radius: 50%;
+    margin-left: 5px;
+  }
+
+  
+}
+
+@media only screen and (max-width: 600px) {
+  .button{
+    height: 80px !important;
+    width: 80px !important;
+  }
+}

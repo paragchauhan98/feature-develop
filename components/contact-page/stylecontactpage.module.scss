@@ -1,0 +1,494 @@
+$primary-color: #FF007F;
+$background-color: linear-gradient(135deg, #121212, #1a1a1a);
+$text-color: #fff;
+$input-border: rgba(255, 255, 255, 0.3);
+$input-focus-border: #ff007f;
+$button-hover: #e6006e;
+
+.contactPage {
+  min-height: 100vh;
+  background: $background-color;
+  color: $text-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+  padding-left: calc(6vw * 2);
+  padding-right:calc(6vw * 2);
+
+  .title {
+    display: none;
+    margin-top: 180px;
+    padding-bottom: 50px;
+    width: 100%;
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      .imageContainer {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        border-radius: 50%;
+        overflow: hidden;
+       
+
+        img {
+          object-fit: cover;
+        }
+      }
+      h1 {
+     
+
+        span{
+          display: inline-block;
+          color: #FF007F;
+        }
+      }
+    }
+    h1 {
+      font-size: 7vw;
+      margin: 0px;
+      font-weight: 300;
+    }
+
+
+ 
+  }
+
+  // Hero Section
+  .hero {
+    margin-top: 180px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 150px;
+
+    .heroText {
+      flex: 1;
+      width: 70%;
+      h1 {
+        font-size: 6rem;
+        font-weight: bold;
+        text-align: left;
+        span {
+          color: $primary-color;
+        }
+      }
+      p {
+        font-size: 6rem;
+        color: #ddd;
+        text-align: left;
+      }
+    }
+
+    .heroImage {
+      float: left;
+      width: 30%;
+      
+      img {
+        
+        width: 200px;
+        height: 200px;
+        border-radius: 50px;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .contactSection {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 150px;
+    // Contact Form (Left Side)
+    .contactForm {
+      width:70%;
+      float: left;
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      padding-right: 50px;
+
+      .formGroup {
+        position: relative;
+        width: 80%;
+
+        .errorMessage {
+          color: red;
+          font-size: 0.8rem;
+          position: absolute;
+          left: 0;
+          opacity: 1;
+          transition: opacity 0.3s ease, transform 0.3s ease;
+          transform: translateY(5px);
+        }
+      
+        .errorInput {
+          border-bottom-color: red !important;
+        }
+      
+        input:focus.errorInput,
+        textarea:focus.errorInput {
+          border-bottom-color: red !important;
+        }
+
+        input,
+        textarea {
+          width: 100%;
+          padding: 14px;
+          font-size: 1.2rem;
+          background: transparent;
+          border: none;
+          border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+          color: #fff;
+          transition: all 0.3s ease;
+          outline: none;
+      
+          &:focus {
+            border-bottom-color: #ff007f;
+          }
+      
+          &:hover {
+            border-bottom-color: rgba(255, 255, 255, 0.6);
+          }
+        }
+      
+        label {
+          position: absolute;
+          left: 14px;
+          top: 50%;
+          transform: translateY(-50%);
+          font-size: 1rem;
+          color: rgba(255, 255, 255, 0.6);
+          transition: all 0.3s ease;
+          pointer-events: none;
+        }
+        // ✅ Keeps label above when there's input
+  .filledLabel {
+    top: 5px;
+    font-size: 0.85rem;
+    color: #ff007f;
+  } 
+      
+        input:focus + label,
+        input:not(:placeholder-shown) + label,
+        textarea:focus + label,
+        textarea:not(:placeholder-shown) + label {
+          top: 5px;
+          font-size: 0.85rem;
+          color: #ff007f;
+        }
+  // input,
+  // textarea {
+  //   width: 100%;
+  //   padding: 14px;
+  //   font-size: 1rem;
+  //   background: transparent;
+  //   border: none;
+  //   border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  //   color: #fff;
+  //   transition: all 0.3s ease;
+  //   outline: none;
+
+  //   &:focus {
+  //     border-bottom-color: #ff007f;
+  //   }
+
+  //   &:hover {
+  //     border-bottom-color: rgba(255, 255, 255, 0.6);
+  //   }
+  // }
+
+  // label {
+  //   position: absolute;
+  //   left: 14px;
+  //   top: 50%;
+  //   transform: translateY(-50%);
+  //   font-size: 1rem;
+  //   color: rgba(255, 255, 255, 0.6);
+  //   transition: all 0.3s ease;
+  //   pointer-events: none;
+  // }
+
+  // input:focus + label,
+  // input:not(:placeholder-shown) + label,
+  // textarea:focus + label,
+  // textarea:not(:placeholder-shown) + label {
+  //   top: 5px;
+  //   font-size: 0.85rem;
+  //   color: #ff007f;
+  // }
+
+        // input,
+        // textarea {
+        //   width: 100%;
+        //   padding: 14px;
+        //   font-size: 1rem;
+        //   background: transparent;
+        //   border: none;
+        //   border-bottom: 2px solid $input-border;
+        //   color: $text-color;
+        //   transition: all 0.3s ease;
+        //   outline: none;
+
+        //   &:focus {
+        //     border-bottom-color: $input-focus-border;
+        //   }
+        // }
+
+        // label {
+        //   position: absolute;
+        //   left: 10px;
+        //   top: 50%;
+        //   transform: translateY(-50%);
+        //   font-size: 1rem;
+        //   color: rgba(255, 255, 255, 0.6);
+        //   transition: all 0.3s ease;
+        //   pointer-events: none;
+        // }
+
+        // input:focus + label,
+        // textarea:focus + label {
+        //   top: 5px;
+        //   font-size: 0.85rem;
+        //   color: $primary-color;
+        // }
+      }
+
+      .submitBtn { width: 80%;
+        margin-top: 60px;
+        padding: 14px;
+        font-size: 1rem;
+        font-weight: 600;
+        background: linear-gradient(45deg, $primary-color, $button-hover);
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background: linear-gradient(45deg, $button-hover, $primary-color);
+          transform: translateY(-2px);
+        }
+      }
+    }
+
+    // Contact Details (Right Side)
+    // .contactInfo {
+    //   width: 30%;
+    //   float: left;
+    //   text-align: left;
+    
+
+    //   h2{
+    //     font-size: 2rem;
+    //     margin-bottom: 20px;
+    //     font-weight: bold;
+    //   }
+
+    //   p{
+    //     font-size: 1rem;
+    //     margin-bottom: 20px;
+    //   }
+    // }
+
+    .contactInfo {
+      position: relative;
+      padding: 2rem;
+      width: 30%;
+      transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+    
+      &:hover {
+        transform: scale(1.02);
+      }
+    
+      h2 {
+        font-size: 2.4rem;
+        font-weight: bold;
+        transition: transform 0.3s ease-out, color 0.4s ease-out, letter-spacing 0.4s ease-out;
+      }
+    
+      p {
+        font-size: 1.4rem;
+        margin: 0.5rem 0;
+        transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+      }
+    
+      &:hover h2 {
+        color: #ff007f;
+        transform: translateY(-2px);
+        letter-spacing: 1.5px; // Expanding letter spacing slightly
+      }
+    
+      &:hover p:nth-child(2) { transform: translateY(-1px); }
+      &:hover p:nth-child(3) { transform: translateY(-2px); }
+      &:hover p:nth-child(4) { transform: translateY(-1px); }
+    
+      // Subtle floating animation for a natural movement effect
+      @keyframes floatEffect {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-3px); }
+        100% { transform: translateY(0px); }
+      }
+    
+      h2, p {
+        animation: floatEffect 6s infinite ease-in-out;
+      }
+    
+      // Background glow effect that subtly pulses
+      // &::after {
+      //   content: "";
+      //   position: absolute;
+      //   width: 120%;
+      //   height: 130%;
+      //   background: radial-gradient(circle, rgba(255, 0, 127, 0.1) 0%, transparent 80%);
+      //   top: 50%;
+      //   left: 50%;
+      //   transform: translate(-50%, -50%);
+      //   opacity: 0;
+      //   transition: opacity 0.6s ease-in-out;
+      // }
+    
+      // &:hover::after {
+      //   opacity: 1;
+      // }
+    
+      // // Adding a dynamic blur glow effect on hover
+      // &::before {
+      //   content: "";
+      //   position: absolute;
+      //   width: 100%;
+      //   height: 100%;
+      //   background: radial-gradient(circle, rgba(255, 0, 127, 0.15) 0%, transparent 80%);
+      //   filter: blur(10px);
+      //   opacity: 0;
+      //   transition: opacity 0.5s ease-in-out;
+      // }
+    
+      // &:hover::before {
+      //   opacity: 1;
+      // }
+    }
+    
+    
+   
+   
+    
+    
+    
+  }
+
+
+  
+
+
+
+
+  
+}
+
+.contact {
+  color: white;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: #141516;
+  position: relative;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 200px;
+  padding: 20px;
+  width: 100%;
+  max-width: 1800px;
+
+  div {
+    display: flex;
+    gap: 10px;
+    align-items: flex-end;
+
+    p,
+    h3 {
+      margin: 0px;
+      padding: 2.5px;
+      cursor: pointer;
+    }
+
+    p {
+      &::after {
+        content: "";
+        width: 0%;
+        height: 1px;
+        background-color: white;
+        display: block;
+        margin-top: 2px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: width 0.2s linear;
+      }
+      &:hover {
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+
+    span {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    h3 {
+      color: grey;
+      cursor: default;
+      font-weight: 300;
+      font-size: 1em;
+    }
+  }
+}
+
+@media only screen and (max-width: 902px) {
+  .contactPage{
+    .hero{
+      display: none;
+    }
+    .title{
+      display: flex;
+    }
+  }
+  
+
+  .contactSection{
+    flex-direction: column-reverse;
+   
+    .contactInfo{
+      padding: 0px !important;
+      margin-bottom: 50px;
+      width: 100% !important;
+    }
+
+    .contactForm{
+      width: 100% !important;
+      padding-right: 0px !important;
+
+      .formGroup{
+        width: 100% !important;
+      }
+      .submitBtn{
+        width: 100% !important;
+      }
+    }
+  }
+
+}
+
+
