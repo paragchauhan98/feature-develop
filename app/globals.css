@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0px;
+  cursor: wait;
+}
+:root{
+  font-size: 10px; 
+}
