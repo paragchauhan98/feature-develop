@@ -193,7 +193,7 @@ const handleChange = (field, value) => {
             />
             <label className={formData.email ? styles.filledLabel : ""}>What is your email?</label>
             <div style={{ minHeight: "20px" }}>  
-            {error.name && <span className={styles.errorMessage}>Email is required</span>}
+            {error.email && <span className={styles.errorMessage}>Email is required</span>}
             </div>
 
           </div>
@@ -227,7 +227,7 @@ const handleChange = (field, value) => {
             ></textarea>
             <label>Your message</label>
             <div style={{ minHeight: "20px" }}>  
-            {error.name && <span className={styles.errorMessage}>Message is required</span>}
+            {error.message && <span className={styles.errorMessage}>Message is required</span>}
             </div>
           </div>
 
