@@ -129,7 +129,7 @@ const handleChange = (field, value) => {
                             <Image 
                                 fill={true}
                                 alt={"image"}
-                                src={`/images/parag.jpeg`}
+                                src={`/images/parag.jpg`}
                             />
                         </div>
                         {/* <h2>Let's <span>work</span> together</h2> */}
