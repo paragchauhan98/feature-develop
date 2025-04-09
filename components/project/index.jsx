@@ -207,8 +207,7 @@ import Button from "../../common/roundedbutton";
 
 const index = () => {
   const projects = [
-    { id: "1", title: "The Growth Gen", src: "thegrowthgen.png", color: "#000000",year: 2024, description: "Design and Development",},
-    { id: "2", title: "StientLief Technologies", src: "officestudio.png", color: "#8C8C8C",year: 2024,description: "Design and Development", },
+    { id: "1", title: "The Growth Gen", src: "thegrowthgen.png", color: "#000000",year: 2024, description: "Design and Development",}
   ];
 
   const scaleAnimation = {

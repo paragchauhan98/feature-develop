@@ -347,7 +347,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { projects } from "./data/project"; // Import projects
 
-const filters = ["All", "Branding", "Web Design", "Development"];
+const filters = ["All", "Portfolio", "Landing Page", "Web Development"];
 
 const Work = () => {
   const [modal, setModal] = useState({ active: false, index: 0 });

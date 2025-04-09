@@ -23,31 +23,6 @@ export const projects = [
           title: "The Growth Gen Video"
         },
       ],
-    },
-    {
-      id: "2",
-      title: "Project Two",
-      category: ["Web Design"],
-      src: "/images/parag.jpeg",
-      color: "grey", // Red as per your request
-      description: "Design and Development",
-      client: "Steintleif Technologies",
-      year: 2025,
-      location: "Delhi, India",
-      liveSiteUrl: "https://steintleif.com",
-      images: [
-        "/images/panda.jpg",
-        "/images/panda.jpg",
-        "/images/panda.jpg",
-        "/images/panda.jpg",
-        "/images/panda.jpg",
-        "/images/panda.jpg"
-      ],
-      videos: [
-        {
-          src: "/images/thegrowthgen.mov",
-          title: "The Growth Gen Video"
-        },
-      ],
-    },
+    }
+   
   ];
