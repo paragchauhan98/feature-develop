@@ -352,6 +352,10 @@
     display: none;
    }
 
+   .projectItem{
+    padding: 24px;
+   }
+
    .persistentModals{
     display: flex;
     flex-direction: row;
@@ -362,6 +366,8 @@
    }
    .persistentModal {
     height: auto;
+    width: 100%;
+    padding: 40px;
   }
 
   hr{
