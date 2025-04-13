@@ -264,8 +264,9 @@ const index = () => {
       </div>
 
       <div className={styles.persistentModals}>
+        
         {projects.map((project, index) => (
-          <>
+           <Link href={`/projects/${projects[index]?.id || ''}`}>
           <div key={`persistent_${index}`} className={styles.persistentModal} style={{ backgroundColor: project.color }}>
             <Image src={`/images/${project.src}`} width={500} height={500} alt={project.title} />
             
@@ -281,7 +282,7 @@ const index = () => {
             <p className={styles.persistentInfo2}>{project.year}</p>
            
           </div>
-          </>
+          </Link>
         ))}
       </div>
 
