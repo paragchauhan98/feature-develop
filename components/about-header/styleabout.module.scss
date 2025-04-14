@@ -220,11 +220,12 @@
 // }
 .services {
   
-  height: 100vh;
+  height:70vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-bottom: 300px;
   .container {
     
     width: 90%;
@@ -306,7 +307,7 @@ p{
   .services {
     flex-direction: column;
     gap: 2rem;
-    margin-top: 10rem;
+    margin-top: 30rem;
   }
 
   .service {
