@@ -43,17 +43,18 @@ const Header = () => {
       href: "/",
     },
     {
+      title: "About",
+      href: "/about",
+    },
+    {
       title: "Work",
       href: "/work",
     },
     {
       title: "Contact",
       href: "/contact",
-    },
-    {
-      title: "About",
-      href: "/about",
-    },
+    }
+  
   ];
 
   const [isMenu, setMenu] = useState(false);

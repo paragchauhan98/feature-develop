@@ -142,9 +142,10 @@ const Navbar = ({ toggleMenu }) => {
 
   const navItems = [
     { title: "Home", href: "/" },
-    { title: "Work", href: "/work" },
-    { title: "Contact", href: "/contact" },
     { title: "About", href: "/about" },
+    { title: "Work", href: "/work" },
+    { title: "Contact", href: "/contact" }
+    
   ];
 
   return (
