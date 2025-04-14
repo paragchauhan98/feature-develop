@@ -121,7 +121,7 @@ export default function Contact() {
                             <Image 
                                 fill={true}
                                 alt={"image"}
-                                src={`/images/parag.jpeg`}
+                                src={`/images/bground.png`}
                             />
                         </div>
                         <h2>Let's <span>work</span> together</h2>
