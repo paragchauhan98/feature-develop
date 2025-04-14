@@ -2,7 +2,7 @@ export const projects = [
     {
       id: "1",
       title: "The Growth Gen",
-      category: ["Branding"],
+      category: ["Landing Page"],
       src: "/images/thegrowthgen.png",
       color: "lightgrey", // Red as per your request
       description: "Design and Development",
