@@ -69,6 +69,26 @@ const ContactPage = () => {
   //   }, 600);
   // };
   // Validate all fields on submit
+// const handleSubmit = (e) => {
+//   e.preventDefault();
+//   let newErrors = {};
+
+//   if (!formData.name.trim()) newErrors.name = "Name is required";
+//   if (!formData.email.trim()) {
+//     newErrors.email = "Email is required";
+//   } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+//     newErrors.email = "Invalid email format";
+//   }
+//   if (!formData.message.trim()) newErrors.message = "Message is required";
+
+//   setError(newErrors);
+
+//   // If no errors, proceed with form submission
+//   if (Object.keys(newErrors).length === 0) {
+//     alert("Form submitted successfully!");
+//   }
+// };
+
 const handleSubmit = (e) => {
   e.preventDefault();
   let newErrors = {};
@@ -86,6 +106,18 @@ const handleSubmit = (e) => {
   // If no errors, proceed with form submission
   if (Object.keys(newErrors).length === 0) {
     alert("Form submitted successfully!");
+
+    // ✅ Clear the form
+    setFormData({ name: "", email: "", message: "", business: "" });
+
+    // ✅ Optionally clear errors
+    setError({ name: false, email: false, message: false });
+
+    // ✅ Reset floating label position (optional, if you're using floating label animation)
+    const labels = formRef.current.querySelectorAll("label");
+    labels.forEach((label) => {
+      label.classList.remove(styles.filledLabel);
+    });
   }
 };
 
@@ -259,18 +291,15 @@ const handleChange = (field, value) => {
                         <p>2022 © Edition</p>
                     </span>
                     <span>
-                        <h3>Time</h3>
-                        <p>11:49 PM GMT+2</p>
                     </span>
                 </div>
                 <div>
-                    <span>
-                        <h3>Socials</h3>
-                        <p>Awwwards</p>
-                    </span>
-                    <p>Instagram</p>
-                    <p>Dribbble</p>
-                    <p>LinkedIn</p>
+                <span>
+                            <h3>Socials</h3>
+                            <a href="/#" className='magnetic'>Instagram</a>
+                        </span>
+                        
+                        <a href="https://www.linkedin.com/in/parag-singh-427764179/" className='magnetic'>LinkedIn</a>
                 </div>
             </div>
         </div>
